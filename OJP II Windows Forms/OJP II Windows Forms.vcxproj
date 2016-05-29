@@ -43,6 +43,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\krzychu\Documents\Visual Studio 2013\Projects\OJP II Windows Forms\OJP II Windows Forms\SDL2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\krzychu\Documents\Visual Studio 2013\Projects\OJP II Windows Forms\OJP II Windows Forms\SDL2\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -55,9 +57,9 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies />
+      <AdditionalDependencies>glew32.lib;glu32.lib;openGL32.lib;gdi32.lib;User32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
-      <EntryPointSymbol>main</EntryPointSymbol>
+      <EntryPointSymbol>mainasd</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -78,12 +80,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="_MainForm.cpp" />
+    <ClCompile Include="_DisplayWater.cpp" />
+    <ClCompile Include="_MDIForm.cpp" />
+    <ClCompile Include="_MenuWater.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="_MainForm.h">
+    <ClInclude Include="OpenGL.h" />
+    <ClInclude Include="OpenGLWater.h" />
+    <ClInclude Include="_DisplayWater.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="_MDIForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="_MenuWater.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="_DisplayWater.resx">
+      <DependentUpon>_DisplayWater.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_MDIForm.resx">
+      <DependentUpon>_MDIForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_MenuWater.resx">
+      <DependentUpon>_MenuWater.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
