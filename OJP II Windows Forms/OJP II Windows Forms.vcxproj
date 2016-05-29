@@ -85,7 +85,6 @@
     <ClCompile Include="_MenuWater.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="OpenGL.h" />
     <ClInclude Include="OpenGLWater.h" />
     <ClInclude Include="_DisplayWater.h">
       <FileType>CppForm</FileType>

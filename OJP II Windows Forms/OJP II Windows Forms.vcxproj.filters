@@ -35,9 +35,6 @@
     <ClInclude Include="_DisplayWater.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="OpenGL.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="OpenGLWater.h">
       <Filter>Header Files</Filter>
     </ClInclude>
