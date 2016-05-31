@@ -12,7 +12,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{F47A92CC-018C-4A5D-8BF5-D06B2AA72C6B}</ProjectGuid>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <Keyword>ManagedCProj</Keyword>
     <RootNamespace>OJPIIWindowsForms</RootNamespace>
   </PropertyGroup>
@@ -43,8 +43,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\krzychu\Documents\Visual Studio 2013\Projects\OJP II Windows Forms\OJP II Windows Forms\SDL2\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\krzychu\Documents\Visual Studio 2013\Projects\OJP II Windows Forms\OJP II Windows Forms\SDL2\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -69,7 +69,9 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies />
+      <AdditionalDependencies>glew32.lib;glu32.lib;openGL32.lib;gdi32.lib;User32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>mainasd</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
